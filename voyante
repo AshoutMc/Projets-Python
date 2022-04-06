@@ -1,0 +1,41 @@
+import random
+nombre_random = random.randint(1, 9)
+
+nom = input('Quel est ton nom ?')
+question = input('Quelle est ta question ?')
+nom_voyant = input('Quelle est le nom de ton ou ta voyante ?')
+
+
+réponse = ''
+if nombre_random == 1:
+  réponse = 'Oui, évidement'
+elif nombre_random == 2:
+  réponse = 'Ummm, je ne pense pas...'
+elif nombre_random == 3:
+  réponse = 'Sans doute !'
+elif nombre_random == 4:
+  réponse = 'je ne sais pas, essaies encore.'
+elif nombre_random == 5:
+  réponse = 'Clairement pas.'
+elif nombre_random == 6:
+  réponse = 'Je ne préfère pas répondre.'
+elif nombre_random == 7:
+  réponse = 'Mes sources disent que non.'
+elif nombre_random == 8:
+  réponse = 'Visiblement, non.'
+elif nombre_random == 9:
+  réponse = 'Visiblement, oui.'
+else:
+  réponse = 'Error'
+
+if nom == '':
+    print("Question: ", question)
+else:
+  print(nom, 'demande: ', question)
+
+if nom_voyant == '':
+  print('Tu dois dabord donner un nom à ton ou ta voyante !')
+elif question == '':
+  print(nom_voyant, ' ne peut pas te répondre si tu ne pose pas de question.')
+else:
+  print(nom_voyant, " répond: ", réponse)
